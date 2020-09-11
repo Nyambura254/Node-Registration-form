@@ -1,25 +1,26 @@
 {
-  "name": "Node-Registration-form",
-  "version": "1.0.0",
-  "description": "Node.js and the Express framework to build a simple registration form with basic validation, which persists its data to a MongoDB database. We’ll add a view to list successful registration, which we’ll protect with basic HTTP authentication, and we’ll use Bootstrap to add some styling.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nyambura254/Node-Registration-form.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Nyambura254/Node-Registration-form/issues"
-  },
-  "homepage": "https://github.com/Nyambura254/Node-Registration-form#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.4",
-    "save-dev": "^0.0.1-security"
-  }
+    "name": "Node-Registration-form",
+    "version": "1.0.0",
+    "description": "Node.js and the Express framework to build a simple registration form with basic validation, which persists its data to a MongoDB database. We’ll add a view to list successful registration, which we’ll protect with basic HTTP authentication, and we’ll use Bootstrap to add some styling.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "nodemon ./start.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nyambura254/Node-Registration-form.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Nyambura254/Node-Registration-form/issues"
+    },
+    "homepage": "https://github.com/Nyambura254/Node-Registration-form#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.4",
+        "save-dev": "^0.0.1-security"
+    }
 }
