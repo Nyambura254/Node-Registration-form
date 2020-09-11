@@ -3,6 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 
+// This uses the render method on Express’s response object to send the rendered view to the client.
 router.get('/', (req, res) => {
     res.render('form');
 });
