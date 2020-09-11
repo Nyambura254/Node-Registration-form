@@ -1,0 +1,18 @@
+//- Basic Templating with Pug
+//- A template engine enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client.
+form(action="." method="POST")
+  label(for="name") Name:
+  input(
+    type="text"
+    id="name"
+    name="name"
+  )
+
+  label(for="email") Email:
+  input(
+    type="email"
+    id="email"
+    name="email"
+  )
+
+  input(type="submit" value="Submit")
