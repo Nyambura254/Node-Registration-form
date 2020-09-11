@@ -15,7 +15,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const routes = require('./routes/index');
-
+app.use(express.static('public'));
 const app = express();
 
 // configure app.js to use Pug as a layout engine and to look for templates inside the views folder

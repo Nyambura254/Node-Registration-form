@@ -1,23 +1,20 @@
-//- Basic Templating with Pug
-//- A template engine enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client.
-
-//-  check for an errors property, and if it’s present, loop over any errors and display them in a list:
 extends layout
 
 block content
   -data = data || {}
 
   if errors
-    ul
+    ul.my-errors
       for error in errors
         li= error.msg
 
-  form(action="." method="POST")
+  form(action="." method="POST" class="form-registration")
     label(for="name") Name:
     input(
       type="text"
       id="name"
       name="name"
+      class="form-control"
       value=data.name
     )
 
@@ -26,6 +23,12 @@ block content
       type="email"
       id="email"
       name="email"
+      class="form-control"
       value=data.email
     )
-    input(type="submit" value="Submit")
+
+    input(
+      type="submit"
+      value="Submit"
+      class="btn btn-lg btn-primary btn-block"
+    )

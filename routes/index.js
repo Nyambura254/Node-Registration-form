@@ -1,6 +1,13 @@
 // Here, we’re importing Express into our routes file and then grabbing the router from it. We then use the router to respond to any requests to the root URL (in this case http://localhost:3000) with an “It works!” message.
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+
+const path = require('path');
+const auth = require('http-auth');
+
+const basic = auth.basic({
+    file: path.join(__dirname, '../users.htpasswd'),
+});
 //Validating Form Input
 const { check, validationResult } = require('express-validator');
 
@@ -13,13 +20,13 @@ const Registration = mongoose.model('Registration');
 // router.get('/', (req, res) => {
 //     res.render('form', { title: 'Registration form' });
 // });
-router.get('/registrations', (req, res) => {
+router.get('/registrations', basic.check((req, res) => {
     Registration.find()
         .then((registrations) => {
             res.render('index', { title: 'Listing registrations', registrations });
         })
         .catch(() => { res.send('Sorry! Something went wrong.'); });
-});
+}));
 // router.post('/', (req, res) => {
 //     console.log(req.body);
 //     res.render('form', { title: 'Registration form' });
