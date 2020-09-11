@@ -4,9 +4,15 @@ const express = require('express');
 const router = express.Router();
 
 // This uses the render method on Express’s response object to send the rendered view to the client.
+
+// pass in an appropriate title for the template to display:
 router.get('/', (req, res) => {
-    res.render('form');
+    res.render('form', { title: 'Registration form' });
 });
+router.post('/', (req, res) => {
+    res.render('form', { title: 'Registration form' });
+});
+
 
 
 module.exports = router;
